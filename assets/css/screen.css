@@ -2438,6 +2438,15 @@ Usage (In Ghost editor):
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
 
+.footer-badge {
+    height: 250px;
+}
+
+.footer-badge img {
+    height: 100%;
+    width: auto;
+}
+
 .site-footer {
     position: relative;
     padding-top: 20px;

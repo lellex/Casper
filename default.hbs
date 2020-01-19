@@ -42,8 +42,13 @@
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <div class="footer-badge">
+                    <a href="https://pvtistes.net/" rel="noopeners">
+                        <img src="{{asset "badge_PVTistes_blog_awards_2020_nz.png"}}" />
+                    </a>
+                </div>
                 <nav class="site-footer-nav">
-                    <a href="{{@site.url}}">Latest Posts</a>
+                    <a href="{{@site.url}}">Derniers articles</a>
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
                     <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
@@ -95,7 +100,9 @@
         $(function() {
             const contentImages = document.querySelectorAll('.post-full-content img');
             contentImages.forEach(function(element) {
-                $(element).wrap(`<a class="lightbox" href='${element.src}'></a>`);
+                if (element) {
+                    $(element).wrap(`<a class="lightbox" href='${element.src}'></a>`);s
+                }
             });
             var lightbox = $('.post-full-content a.lightbox').simpleLightbox();
         });
