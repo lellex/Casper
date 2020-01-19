@@ -100,9 +100,7 @@
         $(function() {
             const contentImages = document.querySelectorAll('.post-full-content img');
             contentImages.forEach(function(element) {
-                if (element) {
-                    $(element).wrap(`<a class="lightbox" href='${element.src}'></a>`);s
-                }
+                $(element).wrap(`<a class="lightbox" href='${element.src}'></a>`);
             });
             var lightbox = $('.post-full-content a.lightbox').simpleLightbox();
         });
