@@ -10,9 +10,8 @@ into the {body} of the default.hbs template --}}
         </div>
         <div class="site-header-content-home">
             <h1 class="site-title">
-                Blog voyage (archive)
+                Blog voyage en Nouvelle-Zélande (archive)
             </h1>
-            <h2 class="site-description">Récits de voyage en France et en Nouvelle-Zélande entre 2019 et 2020</h2>
         </div>
         {{> "site-nav"}}
     </div>
@@ -55,7 +54,7 @@ into the {body} of the default.hbs template --}}
             </section>
 
             <div class="post-feed post-pro">
-                {{#get "posts" filter="tag:project" limit="all" include="tags"}}
+                {{#get "posts" filter="tag:nouvelle-zelande" limit="all" include="tags"}}
                 {{#foreach posts}}
 
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
